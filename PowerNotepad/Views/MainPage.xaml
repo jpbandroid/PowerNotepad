@@ -8,19 +8,7 @@
     xmlns:editor="using:WinUIEditor">
 
     <Grid x:Name="ContentArea">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="48" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
+        <editor:CodeEditorControl x:Name="MyEditor" HighlightingLanguage="csharp" />
 
-        <TextBlock
-            Grid.Row="0"
-            x:Uid="Main_Title"
-            Style="{StaticResource PageTitleStyle}" />
-
-        <Grid Grid.Row="1">
-            <editor:CodeEditorControl x:Name="MyEditor" HighlightingLanguage="csharp" />
-        </Grid>
-        
     </Grid>
 </Page>
