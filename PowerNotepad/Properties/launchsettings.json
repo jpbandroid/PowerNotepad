@@ -1,0 +1,10 @@
+﻿{
+    "profiles": {
+      "PowerNotepad (Package)": {
+        "commandName": "MsixPackage"
+      },
+      "PowerNotepad (Unpackaged)": {
+        "commandName": "Project"
+      }
+    }
+}
