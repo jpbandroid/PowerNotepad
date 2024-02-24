@@ -6,9 +6,23 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     xmlns:editor="using:WinUIEditor">
-
-    <Grid x:Name="ContentArea">
-        <editor:CodeEditorControl x:Name="MyEditor" HighlightingLanguage="csharp" />
-
-    </Grid>
+    <RelativePanel>
+        <MenuBar Grid.Column="0" x:Name="manubar">
+            <!--
+    TODO: Update item titles by updating <x:Uid>.Text entries in Strings/en-us/Resources.resw.
+    https://docs.microsoft.com/windows/uwp/app-resources/localize-strings-ui-manifest#refer-to-a-string-resource-identifier-from-xaml
+    -->
+            <MenuBarItem x:Uid="ShellMenuBarItem_File">
+                <MenuFlyoutItem x:Uid="ShellMenuItem_File_Open"/>
+                <MenuFlyoutItem x:Uid="ShellMenuItem_File_Save"/>
+                <MenuFlyoutItem x:Uid="ShellMenuItem_File_Exit"/>
+            </MenuBarItem>
+            <MenuBarItem x:Uid="ShellMenuBarItem_Views">
+                <MenuBarItem.Items>
+                    <MenuFlyoutItem x:Uid="ShellMenuItem_Views_Main"/>
+                </MenuBarItem.Items>
+            </MenuBarItem>
+        </MenuBar>
+        <editor:CodeEditorControl x:Name="MyEditor" HighlightingLanguage="csharp" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignBottomWithPanel="True" RelativePanel.Below="manubar"/>
+    </RelativePanel>
 </Page>

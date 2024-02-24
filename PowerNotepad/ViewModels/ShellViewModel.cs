@@ -20,7 +20,21 @@ public partial class ShellViewModel : ObservableRecipient
         get;
     }
 
+    public ICommand MenuFileOpenCommand
+    {
+        get;
+    }
+    public ICommand MenuFileSaveCommand
+    {
+        get;
+    }
+
     public ICommand MenuSettingsCommand
+    {
+        get;
+    }
+
+    public ICommand MenuHomeCommand
     {
         get;
     }
@@ -42,6 +56,7 @@ public partial class ShellViewModel : ObservableRecipient
 
         MenuFileExitCommand = new RelayCommand(OnMenuFileExit);
         MenuSettingsCommand = new RelayCommand(OnMenuSettings);
+        MenuHomeCommand = new RelayCommand(OnMenuHome);
         MenuViewsMainCommand = new RelayCommand(OnMenuViewsMain);
     }
 
@@ -49,7 +64,10 @@ public partial class ShellViewModel : ObservableRecipient
 
     private void OnMenuFileExit() => Application.Current.Exit();
 
+
+
     private void OnMenuSettings() => NavigationService.NavigateTo(typeof(SettingsViewModel).FullName!);
+    private void OnMenuHome() => NavigationService.NavigateTo(typeof(MainViewModel).FullName!);
 
     private void OnMenuViewsMain() => NavigationService.NavigateTo(typeof(MainViewModel).FullName!);
 }

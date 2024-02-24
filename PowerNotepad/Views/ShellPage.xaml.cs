@@ -98,4 +98,14 @@ public sealed partial class ShellPage : Page
     {
         AnimatedIcon.SetState((UIElement)sender, "Normal");
     }
+
+    private void ShellMenuBarHomeButton_PointerEntered(object sender, PointerRoutedEventArgs e)
+    {
+
+    }
+
+    private void ShellMenuBarHomeButton_PointerExited(object sender, PointerRoutedEventArgs e)
+    {
+
+    }
 }
