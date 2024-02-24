@@ -13,8 +13,8 @@
     https://docs.microsoft.com/windows/uwp/app-resources/localize-strings-ui-manifest#refer-to-a-string-resource-identifier-from-xaml
     -->
             <MenuBarItem x:Uid="ShellMenuBarItem_File">
-                <MenuFlyoutItem x:Uid="ShellMenuItem_File_Open"/>
-                <MenuFlyoutItem x:Uid="ShellMenuItem_File_Save"/>
+                <MenuFlyoutItem x:Uid="ShellMenuItem_File_Open" Click="MenuFlyoutItem_Click"/>
+                <MenuFlyoutItem x:Uid="ShellMenuItem_File_Save" Click="MenuFlyoutItem_Click_1"/>
                 <MenuFlyoutItem x:Uid="ShellMenuItem_File_Exit"/>
             </MenuBarItem>
             <MenuBarItem x:Uid="ShellMenuBarItem_Views">
